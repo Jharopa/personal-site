@@ -1,5 +1,7 @@
 import Head from "next/head";
+
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 const Home = () => {
   return (
@@ -7,7 +9,11 @@ const Home = () => {
       <Head>
         <title>Alexander Burns</title>
       </Head>
-      <Header />
+      <div className="flex flex-col h-screen">
+        <Header />
+        <p className="flex-grow"></p>
+        <Footer />
+      </div>
     </div>
   );
 };
