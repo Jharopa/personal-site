@@ -4,7 +4,7 @@ import Layout from 'components/Layout';
 const Home = () => {
   return (
     <>
-      <PageTitle title="Home" />
+      <PageTitle title="Projects" />
       <Layout></Layout>
     </>
   );

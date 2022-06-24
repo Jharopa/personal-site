@@ -11,15 +11,15 @@ const Header = () => {
             </li>
 
             <li className="text-m font-bold hover:underline hover:text-[#D0D6D6]">
-              <Link href="/#">About</Link>
+              <Link href="/about">About</Link>
             </li>
 
             <li className="text-m font-bold hover:underline hover:text-[#D0D6D6]">
-              <Link href="/#">Projects</Link>
+              <Link href="/projects">Projects</Link>
             </li>
 
             <li className="text-m font-bold hover:underline hover:text-[#D0D6D6]">
-              <Link href="/#">Resume</Link>
+              <Link href="https://github.com/Jharopa">Resume</Link>
             </li>
           </ul>
         </nav>
