@@ -10,7 +10,7 @@ const Footer = () => {
   }, []);
 
   return (
-    <footer className="flex justify-center items-center h-16 mt-4 bg-[#041421]">
+    <footer className="flex justify-center items-center h-16 my-4 bg-[#041421]">
       <a
         href="https://github.com/Jharopa/personal-site"
         className="hover:text-[#D0D6D6]"
