@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <>
       <PageTitle title="Projects" />
-      <Layout></Layout>
+      <Layout>{}</Layout>
     </>
   );
 };

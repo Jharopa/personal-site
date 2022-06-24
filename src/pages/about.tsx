@@ -5,9 +5,7 @@ const About = () => {
   return (
     <>
       <PageTitle title="About" />
-      <Layout>
-        <p></p>
-      </Layout>
+      <Layout>{}</Layout>
     </>
   );
 };

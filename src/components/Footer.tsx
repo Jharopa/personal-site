@@ -10,10 +10,10 @@ const Footer = () => {
   }, []);
 
   return (
-    <footer className="my-4 flex h-16 items-center justify-center bg-[#041421]">
+    <footer className="my-4 flex h-16 items-center justify-center bg-[#000000]">
       <a
         href="https://github.com/Jharopa/personal-site"
-        className="hover:text-[#D0D6D6]"
+        className="hover:text-[#800035]"
       >
         <div>Made by Alexander Burns</div>
         <div className="flex items-center justify-center">
