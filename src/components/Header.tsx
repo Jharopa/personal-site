@@ -3,22 +3,22 @@ import Link from 'next/link';
 const Header = () => {
   return (
     <>
-      <header className="fixed flex items-center justify-center top-0 z-[100] w-screen h-16 bg-[#041421]">
+      <header className="fixed top-0 z-[100] flex h-16 w-screen items-center justify-center bg-[#041421]">
         <nav>
-          <ul className="flex items-center justify-evenly w-96 h-16">
-            <li className="text-m font-bold hover:underline hover:text-[#D0D6D6]">
+          <ul className="flex h-16 w-96 items-center justify-evenly">
+            <li className="text-m font-bold hover:text-[#D0D6D6] hover:underline">
               <Link href="/#">Home</Link>
             </li>
 
-            <li className="text-m font-bold hover:underline hover:text-[#D0D6D6]">
+            <li className="text-m font-bold hover:text-[#D0D6D6] hover:underline">
               <Link href="/about">About</Link>
             </li>
 
-            <li className="text-m font-bold hover:underline hover:text-[#D0D6D6]">
+            <li className="text-m font-bold hover:text-[#D0D6D6] hover:underline">
               <Link href="/projects">Projects</Link>
             </li>
 
-            <li className="text-m font-bold hover:underline hover:text-[#D0D6D6]">
+            <li className="text-m font-bold hover:text-[#D0D6D6] hover:underline">
               <Link href="https://github.com/Jharopa">Resume</Link>
             </li>
           </ul>

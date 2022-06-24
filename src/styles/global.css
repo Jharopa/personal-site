@@ -8,7 +8,7 @@
   }
 
   body {
-    @apply bg-[#041421] text-[#86B9B0] tracking-wide;
+    @apply bg-[#041421] tracking-wide text-[#86B9B0];
   }
 
   h1,

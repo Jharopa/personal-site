@@ -6,9 +6,9 @@ import Footer from '../components/Footer';
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
-      <div className="flex flex-col h-screen justify-between">
+      <div className="flex h-screen flex-col justify-between">
         <Header />
-        <main className="w-2/3 mx-auto mt-20">{children}</main>
+        <main className="mx-auto mt-20 w-2/3">{children}</main>
         <Footer />
       </div>
     </>
