@@ -1,13 +1,13 @@
 import PageTitle from 'components/PageTitle';
 import Layout from 'components/Layout';
-import Button from 'components/Button';
+import Hero from 'components/Hero';
 
 const Home = () => {
   return (
     <>
       <PageTitle title="Home" />
       <Layout>
-        <Button href="/projects">Projects</Button>
+        <Hero />
       </Layout>
     </>
   );

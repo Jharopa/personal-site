@@ -8,7 +8,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
     <>
       <div className="flex h-screen flex-col justify-between">
         <Header />
-        <main className="mx-auto mt-20">{children}</main>
+        <main className="mx-auto w-1/2">{children}</main>
         <Footer />
       </div>
     </>
