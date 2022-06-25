@@ -20,3 +20,22 @@
     @apply font-bold;
   }
 }
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color:  rgb(203 213 225 / var(--tw-text-opacity)) rgb(0, 0, 0);
+}
+
+*::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+*::-webkit-scrollbar-track {
+  background: rgb(0, 0, 0);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgb(203 213 225 / var(--tw-text-opacity));
+}
+
+

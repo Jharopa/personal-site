@@ -1,14 +1,14 @@
 import React from 'react';
 
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import Header from './Header';
+import Footer from './Footer';
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
       <div className="flex h-screen flex-col justify-between">
         <Header />
-        <main className="mx-auto w-1/2">{children}</main>
+        <main className="w-max-2xl mx-auto">{children}</main>
         <Footer />
       </div>
     </>
