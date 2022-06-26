@@ -23,7 +23,7 @@
 
 * {
   scrollbar-width: thin;
-  scrollbar-color:  rgb(203 213 225 / var(--tw-text-opacity)) rgb(0, 0, 0);
+  scrollbar-color: rgb(203 213 225 / var(--tw-text-opacity)) rgb(0, 0, 0);
 }
 
 *::-webkit-scrollbar {
@@ -37,5 +37,3 @@
 *::-webkit-scrollbar-thumb {
   background-color: rgb(203 213 225 / var(--tw-text-opacity));
 }
-
-
