@@ -9,7 +9,6 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
       <div className="flex h-screen flex-col justify-between">
         <Header />
         <main className="w-max-2xl mx-auto">{children}</main>
-        <Footer />
       </div>
     </>
   );

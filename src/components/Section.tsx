@@ -4,7 +4,8 @@ interface SectionProps {
 }
 
 const Section = ({ children, id }: SectionProps) => {
-  const className: string = 'h-screen w-full py-20';
+  const className: string =
+    'flex flex-col justify-between h-screen w-full pt-20';
 
   if (id) {
     return (

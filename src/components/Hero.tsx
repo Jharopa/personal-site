@@ -7,8 +7,8 @@ const Hero = () => {
       <motion.div
         initial={{ y: -200, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 1.0 }}
-        className="my-56 flex h-2/3 flex-col"
+        transition={{ duration: 1.2 }}
+        className="flex h-2/3 flex-col justify-center"
       >
         <p className="pb-3">Hey there! I'm</p>
         <h1 className="pb-3 text-6xl">Alexander Burns</h1>

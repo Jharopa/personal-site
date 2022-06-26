@@ -10,7 +10,7 @@ const Footer = () => {
   }, []);
 
   return (
-    <footer className="flex h-16 items-center justify-center bg-[#000000] py-12 text-slate-300">
+    <footer className="my-6 flex h-16 items-center justify-center bg-[#000000] text-slate-300">
       <a
         href="https://github.com/Jharopa/personal-site"
         className="hover:text-white"
