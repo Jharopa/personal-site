@@ -22,7 +22,7 @@ const Footer = () => {
         hidden: { y: 25, opacity: 0 },
         visible: { y: 0, opacity: 1 },
       }}
-      className="my-24 flex h-16 flex-col items-center justify-evenly text-slate-500"
+      className="my-12 flex flex-col items-center justify-evenly text-slate-500"
     >
       <a
         href="https://github.com/Jharopa/personal-site"

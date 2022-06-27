@@ -9,7 +9,7 @@ const Spotify = () => {
   return (
     <a
       target="_blank"
-      rel="noopener"
+      rel="noopener noreferrer"
       href={
         data?.isPlaying || data?.songUrl
           ? data.songUrl
