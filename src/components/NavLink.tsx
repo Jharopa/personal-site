@@ -9,7 +9,7 @@ const NavLink = ({ href, children }: NavLinkProps) => {
   const isInternal = href.startsWith('/');
   const isAnchor = href.startsWith('#');
   const className =
-    'text-m font-medium text-slate-300 hover:text-white hover:underline';
+    'text-m font-medium text-slate-400 hover:text-black hover:dark:text-white hover:underline';
 
   if (isInternal || isAnchor) {
     return (

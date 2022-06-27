@@ -8,7 +8,8 @@
   }
 
   body {
-    @apply bg-[#000000] tracking-wide text-[#FFFFFF];
+    @apply bg-[#FFFFFF] text-[#000000];
+    @apply dark:bg-[#000000] dark:text-[#FFFFFF];
   }
 
   h1,
