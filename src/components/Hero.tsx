@@ -10,7 +10,7 @@ const Hero = () => {
         transition={{ duration: 1.2 }}
         className="flex h-2/3 flex-col justify-center"
       >
-        <p className="pb-3">Hey there! I'm</p>
+        <p className="pb-3">Hey there! I&apos;m</p>
         <h1 className="pb-3 text-6xl">Alexander Burns</h1>
         <h1 className="text-6xl">I love all things computers.</h1>
       </motion.div>

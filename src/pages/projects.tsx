@@ -1,6 +1,6 @@
 import PageTitle from 'components/PageTitle';
 
-const Home = () => {
+const Projects = () => {
   return (
     <>
       <PageTitle title="Projects" />
@@ -8,4 +8,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Projects;

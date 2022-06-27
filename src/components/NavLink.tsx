@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion';
 import Link from 'next/link';
 
 interface NavLinkProps {
@@ -15,28 +14,15 @@ const NavLink = ({ href, children }: NavLinkProps) => {
   if (isInternal || isAnchor) {
     return (
       <Link href={href}>
-        <motion.a
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1.0, delay: 1.4 }}
-          className={className}
-        >
-          {children}
-        </motion.a>
+        <a className={className}>{children}</a>
       </Link>
     );
   }
 
   return (
-    <motion.a
-      href={href}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 1.0, delay: 1.4 }}
-      className={className}
-    >
+    <a href={href} className={className}>
       {children}
-    </motion.a>
+    </a>
   );
 };
 
