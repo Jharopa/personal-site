@@ -10,10 +10,10 @@ export interface NowPlayingSong {
   title?: string;
 }
 
-export default async (
+async function handler(
   _: NextApiRequest,
   res: NextApiResponse<NowPlayingSong>
-) => {
+) {
   const response = await getNowPlaying();
 
   if (response.status === 204 || response.status > 400) {
@@ -38,4 +38,6 @@ export default async (
     songUrl,
     title,
   });
-};
+}
+
+export default handler;

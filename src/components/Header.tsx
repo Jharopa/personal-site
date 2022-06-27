@@ -2,23 +2,37 @@ import NavLink from './NavLink';
 import { motion } from 'framer-motion';
 import { useTheme } from 'next-themes';
 import { BsSun, BsMoon } from 'react-icons/bs';
+import { useState, useEffect } from 'react';
 
 const Header = () => {
   const { systemTheme, theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const renderThemeChanger = () => {
+    if (!mounted) return null;
+
     const currentTheme = theme === 'system' ? systemTheme : theme;
 
     if (currentTheme == 'dark') {
       return (
-        <button className="mr-8" onClick={() => setTheme('light')}>
+        <button
+          className="mr-8 rounded border-2 border-white p-1 hover:bg-slate-800"
+          onClick={() => setTheme('light')}
+        >
           <BsSun size={20} />
         </button>
       );
     }
 
     return (
-      <button className="mr-8" onClick={() => setTheme('dark')}>
+      <button
+        className="mr-8 rounded border-2 border-black p-1 hover:bg-slate-100"
+        onClick={() => setTheme('dark')}
+      >
         <BsMoon size={20} />
       </button>
     );
@@ -29,7 +43,7 @@ const Header = () => {
       <motion.header
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 1.0, delay: 1.4 }}
+        transition={{ duration: 1.0, delay: 4.2 }}
         className="fixed top-0 z-[100] flex h-16 w-screen items-center justify-between bg-white dark:bg-black"
       >
         <NavLink href="/">
