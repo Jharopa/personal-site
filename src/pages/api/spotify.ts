@@ -1,14 +1,17 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import { getNowPlaying } from 'utils/spotify';
+import { z } from 'zod';
 
-export interface NowPlayingSong {
-  isPlaying: boolean;
-  album?: string;
-  albumImageUrl?: string;
-  artist?: string;
-  songUrl?: string;
-  title?: string;
-}
+const nowPlayingSongValidator = z.object({
+  isPlaying: z.boolean(),
+  title: z.string().optional(),
+  artist: z.string().optional(),
+  album: z.string().optional(),
+  albumImageUrl: z.string().optional(),
+  songUrl: z.string().optional(),
+});
+
+export type NowPlayingSong = z.infer<typeof nowPlayingSongValidator>;
 
 async function handler(
   _: NextApiRequest,
@@ -30,14 +33,16 @@ async function handler(
   const albumImageUrl = song.item.album.images[0].url;
   const songUrl = song.item.external_urls.spotify;
 
-  return res.status(200).json({
-    album,
-    albumImageUrl,
-    artist,
-    isPlaying,
-    songUrl,
-    title,
-  });
+  return nowPlayingSongValidator.parse(
+    res.status(200).json({
+      isPlaying,
+      title,
+      artist,
+      album,
+      albumImageUrl,
+      songUrl,
+    })
+  );
 }
 
 export default handler;
