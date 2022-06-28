@@ -1,13 +1,17 @@
-import PageTitle from 'components/PageTitle';
 import Layout from 'components/Layout';
 import Hero from 'components/Hero';
 import Section from 'components/Section';
 import Footer from 'components/Footer';
+import SEO, { MetaData } from 'components/SEO';
+
+import { siteMeta } from 'settings/siteMeta';
 
 const Home = () => {
+  const metaData: MetaData = siteMeta;
+
   return (
     <>
-      <PageTitle title="Home" />
+      <SEO metaData={metaData} />
       <Layout>
         <Hero />
         <Section id="about">

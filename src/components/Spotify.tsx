@@ -43,7 +43,7 @@ const Spotify = () => {
           {data?.isPlaying || data?.songUrl ? data.title : 'Not Listening'}
         </p>
         <p className="font-dark text-xs">
-          {data?.isPlaying || data?.songUrl ? data.artist : 'Spotify'}
+          {data?.isPlaying || data?.songUrl ? data.artists : 'Spotify'}
         </p>
       </div>
 

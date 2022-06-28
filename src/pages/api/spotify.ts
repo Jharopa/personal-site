@@ -5,7 +5,7 @@ import { z } from 'zod';
 const nowPlayingSongValidator = z.object({
   isPlaying: z.boolean(),
   title: z.string().optional(),
-  artist: z.string().optional(),
+  artists: z.string().optional(),
   album: z.string().optional(),
   albumImageUrl: z.string().optional(),
   songUrl: z.string().optional(),
@@ -26,8 +26,8 @@ async function handler(
   const song = await response.json();
   const isPlaying = song.is_playing;
   const title = song.item.name;
-  const artist = song.item.artists
-    .map((_artist: { name: string }) => _artist.name)
+  const artists = song.item.artists
+    .map((artist: { name: string }) => artist.name)
     .join(', ');
   const album = song.item.album.name;
   const albumImageUrl = song.item.album.images[0].url;
@@ -37,7 +37,7 @@ async function handler(
     nowPlayingSongValidator.parse({
       isPlaying,
       title,
-      artist,
+      artists,
       album,
       albumImageUrl,
       songUrl,
