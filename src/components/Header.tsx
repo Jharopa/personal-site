@@ -66,7 +66,7 @@ const Header = () => {
               y="50%"
               textAnchor="middle"
               strokeWidth=".1"
-              dx=".03em"
+              dx=".025em"
               dy=".3em"
             >
               A

@@ -22,22 +22,22 @@ const Footer = () => {
         hidden: { y: 25, opacity: 0 },
         visible: { y: 0, opacity: 1 },
       }}
-      className="my-12 flex flex-col items-center justify-evenly text-slate-500"
+      className="my-6 flex flex-col items-center justify-evenly text-slate-500"
     >
+      <div className="mb-4 hover:text-black hover:dark:text-white">
+        <Spotify />
+      </div>
+
       <a
         href="https://github.com/Jharopa/personal-site"
-        className="mb-2 hover:text-black dark:hover:text-white"
+        className="hover:text-black dark:hover:text-white"
       >
         <div>Made by Alexander Burns</div>
         <div className="flex items-center justify-center">
-          <FiGitCommit />
-          <span className="px-2 pb-0.5">{commits}</span>
+          <FiGitCommit className="mr-1" />
+          <span className="pb-0.5">{commits}</span>
         </div>
       </a>
-
-      <div className="hover:text-black hover:dark:text-white">
-        <Spotify />
-      </div>
     </motion.footer>
   );
 };

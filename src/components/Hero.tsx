@@ -11,7 +11,9 @@ const Hero = () => {
         className="flex h-2/3 flex-col justify-center text-center"
       >
         <p className="pb-3">Hey there! I&apos;m</p>
-        <h1 className="pb-16 text-6xl">Alexander Burns</h1>
+        <h1 className="animate-text bg-gradient-to-r from-teal-500 via-indigo-500 to-pink-500 bg-clip-text pb-16 text-7xl text-transparent">
+          Alexander Burns
+        </h1>
         <motion.p
           initial={{ x: -250, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
