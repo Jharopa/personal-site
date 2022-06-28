@@ -33,16 +33,14 @@ async function handler(
   const albumImageUrl = song.item.album.images[0].url;
   const songUrl = song.item.external_urls.spotify;
 
-  return nowPlayingSongValidator.parse(
-    res.status(200).json({
-      isPlaying,
-      title,
-      artist,
-      album,
-      albumImageUrl,
-      songUrl,
-    })
-  );
+  return res.status(200).json({
+    isPlaying,
+    title,
+    artist,
+    album,
+    albumImageUrl,
+    songUrl,
+  });
 }
 
 export default handler;
