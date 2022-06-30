@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { FiGitCommit } from 'react-icons/fi';
+
 import Spotify from 'components/Spotify';
 
 const Footer = () => {

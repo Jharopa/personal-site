@@ -1,5 +1,6 @@
-import Section from './Section';
 import { motion } from 'framer-motion';
+
+import Section from './Section';
 
 const Hero = () => {
   return (

@@ -16,6 +16,8 @@ const Home = () => {
         <Hero />
         <Section id="about">
           <h1 className="mt-3 mr-10 flex justify-end text-3xl">About</h1>
+
+          <div></div>
         </Section>
         <Section id="projects">
           <h1 className="mt-3 ml-10 flex justify-start text-3xl">Projects</h1>

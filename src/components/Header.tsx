@@ -1,8 +1,9 @@
-import NavLink from './NavLink';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useTheme } from 'next-themes';
 import { BsSun, BsMoon } from 'react-icons/bs';
-import { useState, useEffect } from 'react';
+
+import NavLink from './NavLink';
 
 const Header = () => {
   const { systemTheme, theme, setTheme } = useTheme();
@@ -78,7 +79,7 @@ const Header = () => {
           <NavLink href="/">Home</NavLink>
           <NavLink href="#about">About</NavLink>
           <NavLink href="#projects">Projects</NavLink>
-          <NavLink href="https://github.com/Jharopa">Resume</NavLink>
+          <NavLink href="/static/CV.pdf">Resume</NavLink>
         </div>
       </nav>
 

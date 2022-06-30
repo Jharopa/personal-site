@@ -1,5 +1,6 @@
-import useSWR from 'swr';
 import { SiSpotify } from 'react-icons/si';
+import useSWR from 'swr';
+
 import { NowPlayingSong } from 'pages/api/spotify';
 
 const Spotify = () => {

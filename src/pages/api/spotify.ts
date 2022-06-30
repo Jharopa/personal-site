@@ -1,6 +1,7 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import { getNowPlaying } from 'utils/spotify';
 import { z } from 'zod';
+
+import { getNowPlaying } from 'utils/spotify';
 
 const nowPlayingSongValidator = z.object({
   isPlaying: z.boolean(),
