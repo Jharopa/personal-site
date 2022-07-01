@@ -19,10 +19,16 @@ const ProjectCard = ({
   return (
     <>
       <NavLink href={href}>
-        <div className="max-w-xs border border-black dark:border-white">
-          <Image src={imageSrc} alt={title} width={1600} height={900} />
+        <div className="max-w-xs border border-black text-slate-500 hover:text-white dark:border-white">
+          <Image
+            className="object-cover object-center"
+            src={imageSrc}
+            alt={title}
+            width={1600}
+            height={900}
+          />
           <div className="w-full px-3 py-2">
-            <h3 className="mb-3 flex text-center text-2xl font-bold leading-8 tracking-tight">
+            <h3 className="mb-3 flex text-center text-2xl font-bold">
               {title}
             </h3>
             <p className="mb-3">{description}</p>

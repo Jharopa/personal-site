@@ -5,10 +5,10 @@ import Footer from 'components/Footer';
 import SEO, { MetaData } from 'components/SEO';
 import ProjectCard from 'components/ProjectCard';
 import projects from 'lib/constants/projects';
-import { siteMeta } from 'lib/constants/siteMeta';
+import { meta } from 'lib/constants/meta';
 
 const Home = () => {
-  const metaData: MetaData = siteMeta;
+  const metaData: MetaData = meta;
 
   return (
     <>
@@ -16,12 +16,10 @@ const Home = () => {
       <Layout>
         <Hero />
         <Section id="about">
-          <h2 className="mt-3 mr-10 flex justify-end text-3xl">About</h2>
-
-          <div></div>
+          <h2 className="mt-3 mr-10 flex justify-start text-3xl">About</h2>
         </Section>
-        <Section id="projects">
-          <h2 className="mt-3 ml-10 flex justify-start text-3xl">Projects</h2>
+        <Section id="projects" className="flex flex-col justify-between">
+          <h2 className="mt-3 ml-10 flex justify-end text-3xl">Projects</h2>
           <div className="grid grid-cols-2 gap-8">
             {projects.map(({ key, href, imageSrc, title, description }) => (
               <ProjectCard

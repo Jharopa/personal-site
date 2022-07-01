@@ -19,7 +19,12 @@ const NavLink = ({ href, className, children }: NavLinkProps) => {
   }
 
   return (
-    <a href={href} className={className}>
+    <a
+      target="_blank"
+      rel="noopener noreferrer"
+      href={href}
+      className={className}
+    >
       {children}
     </a>
   );

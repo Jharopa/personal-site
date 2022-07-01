@@ -4,7 +4,7 @@ const projects = [
     href: 'https://github.com/Jharopa/personal-site',
     imageSrc: '/static/siteImage.jpg',
     title: 'Personal Site',
-    description: "You're in it! Put together using NextJS and Vercel",
+    description: "You're in it! Put together using NextJS and Vercel.",
   },
   {
     key: 2,
