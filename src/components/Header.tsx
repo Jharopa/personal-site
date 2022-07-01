@@ -21,7 +21,7 @@ const Header = () => {
     if (currentTheme == 'dark') {
       return (
         <button
-          className="mr-8 rounded border-2 border-white p-1 hover:bg-slate-800"
+          className="mr-8 border border-white p-1 hover:bg-slate-800"
           onClick={() => setTheme('light')}
         >
           <BsSun size={20} />
@@ -31,13 +31,16 @@ const Header = () => {
 
     return (
       <button
-        className="mr-8 rounded border-2 border-black p-1 hover:bg-slate-100"
+        className="mr-8 border-2 border-black p-1 hover:bg-slate-100"
         onClick={() => setTheme('dark')}
       >
         <BsMoon size={20} />
       </button>
     );
   };
+
+  const style =
+    'text-m font-medium text-slate-400 hover:text-black hover:dark:text-white hover:underline';
 
   return (
     <motion.header
@@ -76,10 +79,18 @@ const Header = () => {
 
       <nav>
         <div className="flex h-16 w-96 items-center justify-evenly">
-          <NavLink href="/">Home</NavLink>
-          <NavLink href="#about">About</NavLink>
-          <NavLink href="#projects">Projects</NavLink>
-          <NavLink href="/static/CV.pdf">Resume</NavLink>
+          <NavLink href="/" className={style}>
+            Home
+          </NavLink>
+          <NavLink href="#about" className={style}>
+            About
+          </NavLink>
+          <NavLink href="#projects" className={style}>
+            Projects
+          </NavLink>
+          <NavLink href="/static/CV.pdf" className={style}>
+            Resume
+          </NavLink>
         </div>
       </nav>
 
