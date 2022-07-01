@@ -1,7 +1,6 @@
 import Image from 'next/image';
-import { BiLinkExternal } from 'react-icons/bi';
 
-import NavLink from './NavLink';
+import CustomLink from './Link';
 
 interface ProjectCardProps {
   href: string;
@@ -18,7 +17,7 @@ const ProjectCard = ({
 }: ProjectCardProps) => {
   return (
     <>
-      <NavLink href={href}>
+      <CustomLink href={href}>
         <div className="max-w-xs border border-black text-slate-500 hover:text-white dark:border-white">
           <Image
             className="object-cover object-center"
@@ -34,7 +33,7 @@ const ProjectCard = ({
             <p className="mb-3">{description}</p>
           </div>
         </div>
-      </NavLink>
+      </CustomLink>
     </>
   );
 };

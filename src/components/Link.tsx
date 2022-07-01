@@ -1,12 +1,12 @@
 import Link from 'next/link';
 
-interface NavLinkProps {
+interface LinkProps {
   href: string;
   className?: string;
   children: React.ReactNode;
 }
 
-const NavLink = ({ href, className, children }: NavLinkProps) => {
+const CustomLink = ({ href, className, children }: LinkProps) => {
   const isInternal = href.startsWith('/');
   const isAnchor = href.startsWith('#');
 
@@ -30,4 +30,4 @@ const NavLink = ({ href, className, children }: NavLinkProps) => {
   );
 };
 
-export default NavLink;
+export default CustomLink;

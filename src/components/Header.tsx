@@ -3,7 +3,8 @@ import { motion } from 'framer-motion';
 import { useTheme } from 'next-themes';
 import { BsSun, BsMoon } from 'react-icons/bs';
 
-import NavLink from './NavLink';
+import CustomLink from './Link';
+import Nav from './Nav';
 
 const Header = () => {
   const { systemTheme, theme, setTheme } = useTheme();
@@ -39,9 +40,6 @@ const Header = () => {
     );
   };
 
-  const style =
-    'text-m font-medium text-slate-400 hover:text-black hover:dark:text-white hover:underline';
-
   return (
     <motion.header
       initial={{ opacity: 0 }}
@@ -49,7 +47,7 @@ const Header = () => {
       transition={{ duration: 1.0, delay: 4.2 }}
       className="fixed top-0 z-[100] flex h-16 w-screen items-center justify-between bg-white dark:bg-black"
     >
-      <NavLink href="/">
+      <CustomLink href="/">
         <svg
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
@@ -75,24 +73,9 @@ const Header = () => {
             A
           </text>
         </svg>
-      </NavLink>
+      </CustomLink>
 
-      <nav>
-        <div className="flex h-16 w-96 items-center justify-evenly">
-          <NavLink href="/" className={style}>
-            Home
-          </NavLink>
-          <NavLink href="#about" className={style}>
-            About
-          </NavLink>
-          <NavLink href="#projects" className={style}>
-            Projects
-          </NavLink>
-          <NavLink href="/static/CV.pdf" className={style}>
-            Resume
-          </NavLink>
-        </div>
-      </nav>
+      <Nav />
 
       {renderThemeChanger()}
     </motion.header>
