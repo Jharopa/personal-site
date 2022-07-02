@@ -16,19 +16,19 @@ const Spotify = () => {
           ? data.songUrl
           : 'https://open.spotify.com/user/vcfxx95s46q7ekzmr56t4te6g'
       }
-      className="relative flex w-96 items-center space-x-4 border border-black p-5 dark:border-white"
+      className="w-58 relative flex h-24 w-64 items-center space-x-4 border border-black p-5 dark:border-white md:w-96"
     >
-      <div className="w-16">
+      <div className="hidden w-16 md:inline">
         {data?.isPlaying ? (
           <img className="w-16" src={data?.albumImageUrl} alt={data?.album} />
         ) : data?.songUrl ? (
           <img
-            className="w-16 grayscale"
+            className="hidden w-16 grayscale md:inline"
             src={data?.albumImageUrl}
             alt={data?.album}
           />
         ) : (
-          <SiSpotify size={64} color={'#64748B'} />
+          <SiSpotify size={64} color={'#64748B'} className="hidden md:inline" />
         )}
       </div>
 
@@ -40,7 +40,7 @@ const Spotify = () => {
             ? 'Recently Playing'
             : ''}
         </p>
-        <p className="component font-bold">
+        <p className="font-bold">
           {data?.isPlaying || data?.songUrl ? data.title : 'Not Listening'}
         </p>
         <p className="font-dark text-xs">

@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { FiGitCommit } from 'react-icons/fi';
+import { AiOutlineStar } from 'react-icons/ai';
 
 import Spotify from 'components/Spotify';
 
 const Footer = () => {
-  const [commits, setCommits] = useState([]);
+  const [stars, setStars] = useState([]);
 
   useEffect(() => {
-    fetch('https://api.github.com/repos/Jharopa/personal-site/commits')
+    fetch('https://api.github.com/repos/Jharopa/personal-site')
       .then((response) => response.json())
-      .then((res) => setCommits(res.length));
+      .then((res) => setStars(res.stargazers_count));
   }, []);
 
   return (
@@ -31,12 +31,12 @@ const Footer = () => {
 
       <a
         href="https://github.com/Jharopa/personal-site"
-        className="hover:text-black dark:hover:text-white"
+        className="mb-2 hover:text-black dark:hover:text-white"
       >
         <div>Made by Alexander Burns</div>
         <div className="flex items-center justify-center">
-          <FiGitCommit className="mr-1" />
-          <span className="pb-0.5">{commits}</span>
+          <AiOutlineStar className="mr-1" />
+          <span className="pb-0.5">{stars}</span>
         </div>
       </a>
     </motion.footer>

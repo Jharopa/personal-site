@@ -5,7 +5,7 @@ interface SectionProps {
 }
 
 const Section = ({ id, children, className }: SectionProps) => {
-  const style: string = 'h-screen w-full pt-20';
+  const style: string = 'h-screen w-full';
 
   if (id) {
     return (
