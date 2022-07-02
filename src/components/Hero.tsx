@@ -9,7 +9,7 @@ const Hero = () => {
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 1.5 }}
-        className="flex h-2/3 flex-col justify-center text-center"
+        className="flex h-3/4 flex-col items-center justify-center text-center"
       >
         <p className="pb-3">Hey there! I&apos;m</p>
         <h1 className="animate-text bg-gradient-to-r from-teal-500 via-indigo-500 to-pink-500 bg-clip-text pb-16 text-7xl text-transparent">
