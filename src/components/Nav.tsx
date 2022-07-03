@@ -20,7 +20,7 @@ const Nav = () => {
     if (currentTheme == 'dark') {
       return (
         <button
-          className="mr-4 hidden border border-white p-1 hover:bg-slate-800 md:flex"
+          className="mr-4 border border-white p-1 hover:bg-slate-800"
           onClick={() => setTheme('light')}
         >
           <BsSun size={20} />
@@ -30,7 +30,7 @@ const Nav = () => {
 
     return (
       <button
-        className="mr-4 hidden border-2 border-black p-1 hover:bg-slate-100 md:flex"
+        className="mr-4 border-2 border-black p-1 hover:bg-slate-100"
         onClick={() => setTheme('dark')}
       >
         <BsMoon size={20} />

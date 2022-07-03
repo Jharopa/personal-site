@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { AiOutlineStar } from 'react-icons/ai';
 
-import Spotify from 'components/Spotify';
+import CustomLink from './Link';
+import Spotify from './Spotify';
 
 const Footer = () => {
   const [stars, setStars] = useState([]);
@@ -29,7 +30,7 @@ const Footer = () => {
         <Spotify />
       </div>
 
-      <a
+      <CustomLink
         href="https://github.com/Jharopa/personal-site"
         className="mb-2 hover:text-black dark:hover:text-white"
       >
@@ -38,7 +39,7 @@ const Footer = () => {
           <AiOutlineStar className="mr-1" />
           <span className="pb-0.5">{stars}</span>
         </div>
-      </a>
+      </CustomLink>
     </motion.footer>
   );
 };
