@@ -1,8 +1,9 @@
 import dynamic from 'next/dynamic';
+import CustomLink from './Link';
 
 const LazyModelCanavas = dynamic(() => import('./ModelCanvas'), {
   ssr: false,
-  loading: () => <div>Loading</div>,
+  loading: () => <div>Loading...</div>,
 });
 
 const About = () => {
@@ -20,19 +21,19 @@ const About = () => {
           <p className="my-3">
             I am currently working as a support technician for the WordPress
             hosting company and digital experience platform WP Engine, but in my
-            spare time I enjoy learing about and messing around with any
+            spare time I enjoy learing about and exploring any
             software that is browser, server, or GPU related.
           </p>
           <p className="my-3">
-            Right now I am playing about with technologies like:
+            Right now I am playing round with technologies like:
           </p>
           <ul className="gap-x my-3 grid w-96 list-disc grid-cols-2 p-6">
-            <li>OpenGL</li>
-            <li>C/C++</li>
-            <li>NextJS</li>
-            <li>Tailwind CSS</li>
-            <li>Python</li>
-            <li>Django</li>
+            <li><CustomLink href="https://www.opengl.org/" className='text-slate-500 hover:text-black hover:underline dark:hover:text-white'>OpenGL</CustomLink></li>
+            <li><CustomLink href="https://cplusplus.com/" className='text-slate-500 hover:text-black hover:underline dark:hover:text-white'>C/C++</CustomLink></li>
+            <li><CustomLink href="https://nextjs.org/" className='text-slate-500 hover:text-black hover:underline dark:hover:text-white'>NextJS</CustomLink></li>
+            <li><CustomLink href="https://tailwindcss.com/" className='text-slate-500 hover:text-black hover:underline dark:hover:text-white'>Tailwind CSS</CustomLink></li>
+            <li><CustomLink href="https://www.python.org/" className='text-slate-500 hover:text-black hover:underline dark:hover:text-white'>Python</CustomLink></li>
+            <li><CustomLink href="https://www.djangoproject.com/" className='text-slate-500 hover:text-black hover:underline dark:hover:text-white'>Django</CustomLink></li>
           </ul>
         </div>
       </div>

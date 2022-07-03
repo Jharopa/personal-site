@@ -18,7 +18,7 @@ const ProjectCard = ({
   return (
     <>
       <CustomLink href={href}>
-        <div className="max-w-xs border border-black text-slate-500 hover:text-white dark:border-white">
+        <div className="max-w-xs border border-black text-slate-500 hover:text-black dark:border-white dark:hover:text-white">
           <Image
             className="object-cover object-center"
             src={imageSrc}
