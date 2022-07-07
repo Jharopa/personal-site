@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useTheme } from 'next-themes';
 import { BsSun, BsMoon } from 'react-icons/bs';
+import { motion } from 'framer-motion';
 
 import CustomLink from './Link';
 
@@ -41,7 +42,12 @@ const Nav = () => {
   const style =
     'text-m font-medium text-slate-400 hover:text-black hover:dark:text-white hover:underline';
   return (
-    <nav className="container relative mx-auto">
+    <motion.nav
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1.0, delay: 4.2 }}
+      className="container relative mx-auto"
+    >
       <div className="flex items-center justify-between">
         <CustomLink href="/" className="ml-4">
           <svg
@@ -87,7 +93,7 @@ const Nav = () => {
 
         {renderThemeChanger()}
       </div>
-    </nav>
+    </motion.nav>
   );
 };
 
