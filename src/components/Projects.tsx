@@ -1,7 +1,7 @@
 import Footer from './Footer';
 import ProjectCard from './ProjectCard';
 
-import projects from 'lib/constants/projects';
+import projects from 'lib/data/projects';
 
 const Projects = () => {
   return (

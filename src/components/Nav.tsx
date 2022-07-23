@@ -5,6 +5,8 @@ import { motion } from 'framer-motion';
 
 import CustomLink from './Link';
 
+import navLinks from 'lib/data/navLinks';
+
 const Nav = () => {
   const { systemTheme, theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
@@ -77,18 +79,11 @@ const Nav = () => {
           </svg>
         </CustomLink>
         <div className="hidden space-x-12 md:flex">
-          <CustomLink href="/" className={style}>
-            Home
-          </CustomLink>
-          <CustomLink href="#about" className={style}>
-            About
-          </CustomLink>
-          <CustomLink href="#projects" className={style}>
-            Projects
-          </CustomLink>
-          <CustomLink href="/static/CV.pdf" className={style}>
-            Resume
-          </CustomLink>
+          {navLinks.map(({ key, href, name }) => (
+            <CustomLink key={key} href={href} className={style}>
+              {name}
+            </CustomLink>
+          ))}
         </div>
 
         {renderThemeChanger()}
